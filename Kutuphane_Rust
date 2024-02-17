@@ -1,0 +1,64 @@
+enum Publication {
+    Book {
+        title: String,
+        author: String,
+        page_count: u32,
+    },
+    Magazine {
+        title: String,
+        issue: u32,
+        topic: String,
+    },
+}
+
+fn main() {
+    let kitaplar = vec![
+        Publication::Book {
+            title: "Yüz Yıllık Yalnızlık".to_string(),
+            author: "Gabriel Garcia Marquez".to_string(),
+            page_count: 471,
+        },
+        Publication::Book {
+            title: "Sapiens".to_string(),
+            author: "Yuval Noah Harari".to_string(),
+            page_count: 443,
+        },
+    ];
+
+    let dergiler = vec![
+        Publication::Magazine {
+            title: "National Geographic".to_string(),
+            issue: 12,
+            topic: "Doğa".to_string(),
+        },
+        Publication::Magazine {
+            title: "Bilim ve Teknik".to_string(),
+            issue: 5,
+            topic: "Teknoloji".to_string(),
+        },
+    ];
+
+    for kitap in kitaplar {
+        yazdir_kitap(kitap);
+    }
+
+    for dergi in dergiler {
+        yazdir_dergi(dergi);
+    }
+}
+
+fn yazdir_kitap(kitap: Publication) {
+    match kitap {
+        Publication::Book { title, author, page_count } => {
+            println!("Kitap: {} yazar: {}, {} sayfa", title, author, page_count)
+        }
+    }
+}
+
+fn yazdir_dergi(dergi: Publication) {
+    match dergi {
+        Publication::Magazine { title, issue, topic } => {
+            println!("Dergi: {} - Sayı: {}, Konu: {}", title, issue, topic)
+        }
+    }
+}
