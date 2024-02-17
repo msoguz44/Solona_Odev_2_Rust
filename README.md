@@ -3,7 +3,7 @@
 
 Bir kütüphane yönetim sistemini temsil eden bir Rust programı yazın. Bu sistemde kitaplar ve dergiler farklı özelliklere sahip olacak şekilde tasarlanmalıdır. Sisteminiz, aşağıdaki gereksinimleri karşılamalıdır:
 
-** Publication adında bir enum tanımlayın. Bu enum iki varyant içermelidir: 
+** Publication adında bir enum tanımlayın. Bu enum iki varyant içermelidir: /n
 ** Book ve Magazine. Her ikisi de farklı veri tipleri içermelidir:
 ** Book varyantı, title, author ve page_count alanlarına sahip bir struct içermelidir.
 ** Magazine varyantı, title, issue ve topic alanlarına sahip bir struct içermelidir.
